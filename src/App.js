@@ -2,15 +2,15 @@ import './App.css';
 import Navbar from './commponents/Navbar';
 import TextForm from './commponents/TextForm';
 //import Greeting from './commponents/Greeting';
-//import About from './commponents/About';
+import About from './commponents/About';
 import { useState } from 'react';
 import Alert from './commponents/Alert';
 import React from "react";
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
 
 
@@ -60,50 +60,48 @@ function App() {
     }, 2000);
   }
 
-  return (
-    <>
-   
-      <Navbar title="TextUtils" aboutText="About TextUtils"
-        mode={mode}
-        toggleMode={toggleMode}
-        showBrownMode={showBrownMode}
-        showPinkMode={showPinkMode} />
-
-      <Alert alert={alert} />
-
-      <div className="container my-3" >
-            {/* <About /> */}
-            <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />
-      </div>
-
-    </>
-  );
   // return (
   //   <>
-  //     <Router>
-  //       <Navbar
-  //         title="TextUtils"
-  //         aboutText="About TextUtils"
-  //         mode={mode}
-  //         toggleMode={toggleMode}
-  //         showBrownMode={showBrownMode}
-  //         showPinkMode={showPinkMode}
-  //       />
+   
+  //     <Navbar title="TextUtils" aboutText="About TextUtils"
+  //       mode={mode}
+  //       toggleMode={toggleMode}
+  //       showBrownMode={showBrownMode}
+  //       showPinkMode={showPinkMode} />
 
-  //       <Alert alert={alert} />
+  //     <Alert alert={alert} />
 
-  //       <div className="container my-3">
-  //         <Routes> {/* Updated from Switch */}
-  //           <Route exact path="/about" element={<About />} /> {/* Updated Route usage */}
-  //           <Route exact path="/textform" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />} />
-  //         </Routes>
-  //       </div>
+  //     <div className="container my-3" >
+  //           {/* <About /> */}
+  //           <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />
+  //     </div>
 
-  //     </Router>
   //   </>
   // );
-  
+  return (
+    <>
+      <Router>
+        <Navbar
+          title="TextUtils"
+          aboutText="About TextUtils"
+          mode={mode}
+          toggleMode={toggleMode}
+          showBrownMode={showBrownMode}
+          showPinkMode={showPinkMode}
+        />
 
+        <Alert alert={alert} />
+
+        <div className="container my-3">
+          <Routes> {/* Updated from Switch */}
+            <Route exact path="/about" element={<About />} /> {/* Updated Route usage */}
+            <Route exact path="/textform" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />} />
+          </Routes>
+        </div>
+
+      </Router>
+    </>
+  );
 }
 
 export default App;
