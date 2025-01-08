@@ -54,7 +54,7 @@ function App() {
 
         <div className="container my-3">
           <Routes> {/* Updated from Switch */}
-            <Route exact path="/about" element={<About mode={mode}/>} /> {/* Updated Route usage */}
+            <Route exact path="/about" element={<About mode={mode} heading="About Us"/>} /> {/* Updated Route usage */}
             <Route exact path="/textform" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />} />
           </Routes>
         </div>

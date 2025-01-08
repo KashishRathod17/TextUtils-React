@@ -60,14 +60,6 @@
   transition: 0.3s;
 }
 
-.theme-selector .circle.brown {
-  background-color: rgb(137, 101, 101);
-}
-
-.theme-selector .circle.pink {
-  background-color: rgb(222, 172, 231);
-}
-
 /* Add a border to the selected theme */
 .theme-selector input[type="radio"]:checked + .circle {
   border: 3px solid black; /* Highlight the selected theme */
